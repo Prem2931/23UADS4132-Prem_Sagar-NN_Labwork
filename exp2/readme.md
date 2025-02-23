@@ -21,11 +21,11 @@ class Perceptron:
         return 1 if x >= 0 else 0
 
     def predict(self, x):
-        x = np.insert(x, 0, 1)  # Add bias term
+        x = np.insert(x, 0, 1)  
         return self.activation(np.dot(self.weights, x))
 
     def train(self, X, y):
-        X = np.c_[np.ones(X.shape[0]), X]  # Add bias column
+        X = np.c_[np.ones(X.shape[0]), X]  
         for _ in range(self.epochs):
             for i in range(X.shape[0]):
                 y_pred = self.activation(np.dot(self.weights, X[i]))

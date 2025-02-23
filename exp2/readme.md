@@ -13,7 +13,7 @@ import numpy as np
 
 class Perceptron:
     def __init__(self, input_size, learning_rate=0.1, epochs=100):
-        self.weights = np.random.randn(input_size + 1)  # +1 for bias
+        self.weights = np.random.randn(input_size + 1)  
         self.learning_rate = learning_rate
         self.epochs = epochs
 
